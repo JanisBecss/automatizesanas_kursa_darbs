@@ -1,3 +1,3 @@
 # automatizesanas_kursa_darbs
 
-Hello!
+Hello!a
