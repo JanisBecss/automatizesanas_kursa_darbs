@@ -1,3 +1,6 @@
-# automatizesanas_kursa_darbs
+# automatizesanas_kursa_darbs\
 
-Hello! aaaaa
+KURSA DARBS
+Jānis Bečs 231RDB015
+
+Projekta uzdevums:
