@@ -4,7 +4,7 @@ KURSA DARBS
 Jānis Bečs 231RDB015
 
 Projekta uzdevums:
-Ievadīt ēdienu un apēstā ēdiena daudzumu. Izvadīt ēdiena kaloriju skaitu, proteīna, ogļhidrātu un tauku daudzumu.
+Ievadīt ēdienu un apēstā ēdiena daudzumu. Izvadīt ēdiena kaloriju skaitu, proteīna, ogļhidrātu un tauku daudzumu(saglabāt arī EXCEL failā).
 
 https://www.myfitnesspal.com/nutrition-facts-calories/cereals
 
