@@ -8,16 +8,31 @@ import time
 from openpyxl import Workbook, load_workbook 
 
 url = "https://www.google.com/search?q=tulkot%C4%81js&sca_esv=594646980&sxsrf=AM9HkKkT8UtYVNOtVlqEq8j6qPwYofAl0Q%3A1703974912971&ei=AJiQZYP4Os-OwPAPqLOUiAY&udm=&ved=0ahUKEwiD-JKbmbiDAxVPBxAIHagZBWEQ4dUDCBE&uact=5&oq=tulkot%C4%81js&gs_lp=Egxnd3Mtd2l6LXNlcnAiCnR1bGtvdMSBanMyChAjGIAEGIoFGCcyChAjGIAEGIoFGCcyBRAAGIAEMgUQABiABDILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMggQABiABBjLATIFEAAYgAQyBRAAGIAEMgUQABiABEiAA1AAWABwAHgBkAEAmAFBoAFBqgEBMbgBA8gBAPgBAeIDBBgAIEGIBgE&sclient=gws-wiz-serp"
+url_2 = "https://www.myfitnesspal.com/nutrition-facts-calories/cereals"
 edieni=[]
 svars_g=[]
 
 
+# service = Service()
+# option = webdriver.ChromeOptions()
+# driver = webdriver.Chrome(service=service, options=option)
+# driver.get(url_2)
+# time.sleep(5)
+
+# find = driver.find_element(By.XPATH, '//*[@id="notice"]/div[4]/button[1]') # piekrīt noteikumiem
+# time.sleep(1)
+# find.click()
+# time.sleep(5)
+
+
+
+###  neaiztikt
 def tulkosana(ediens):
     service = Service()
     option = webdriver.ChromeOptions()
     driver = webdriver.Chrome(service=service, options=option)
     driver.get(url)
-    time.sleep(1)
+    time.sleep(5)
     find = driver.find_element(By.ID, "L2AGLb") # piekrīt noteikumiem
     find.click() 
     find = driver.find_element(By.ID, "tw-sl") # atver izvēles lapu
@@ -59,16 +74,16 @@ def tulkosana(ediens):
     return ediens
 
 
-while True:
-    ediens_lv = str(input("Ko ēdāt: "))
-    if ediens_lv.lower() == "x":
-        break
-    edieni.append(ediens_lv)
-    svars = float(input("Cik g apēdāt: "))
-    svars_g.append(svars) # ēdienu svari (g) saglabāti List
+# while True:
+#     ediens_lv = str(input("Ko ēdāt: "))
+#     if ediens_lv.lower() == "x":
+#         break
+#     edieni.append(ediens_lv)
+#     svars = float(input("Cik g apēdāt: "))
+#     svars_g.append(svars) # ēdienu svari (g) saglabāti List
 
-edieni_eng = tulkosana(edieni) # ēdinu tulkojumi saglabāti List
-print(edieni_eng)
+# edieni_eng = tulkosana(edieni) # ēdinu tulkojumi saglabāti List
+# print(edieni_eng)
 
 
 
