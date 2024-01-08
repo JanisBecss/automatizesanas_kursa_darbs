@@ -6,7 +6,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-
 url = "https://www.google.com/search?q=tulkot%C4%81js&sca_esv=594646980&sxsrf=AM9HkKkT8UtYVNOtVlqEq8j6qPwYofAl0Q%3A1703974912971&ei=AJiQZYP4Os-OwPAPqLOUiAY&udm=&ved=0ahUKEwiD-JKbmbiDAxVPBxAIHagZBWEQ4dUDCBE&uact=5&oq=tulkot%C4%81js&gs_lp=Egxnd3Mtd2l6LXNlcnAiCnR1bGtvdMSBanMyChAjGIAEGIoFGCcyChAjGIAEGIoFGCcyBRAAGIAEMgUQABiABDILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMggQABiABBjLATIFEAAYgAQyBRAAGIAEMgUQABiABEiAA1AAWABwAHgBkAEAmAFBoAFBqgEBMbgBA8gBAPgBAeIDBBgAIEGIBgE&sclient=gws-wiz-serp"
 url_2 = "https://caloriecontrol.org/healthy-weight-tool-kit/food-calorie-calculator/"
 edieni=[]
@@ -16,12 +15,41 @@ service = Service()
 option = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service=service, options=option)
 
+
 driver.get(url_2)
 button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.CLASS_NAME, 'cky-btn-accept')) # akceptē cookies
 )
 button.click() 
+find_2 = driver.find_element(By.ID, "keyword") # atrod search lauciņu
+find_2.clear() # notīra lauku
+find_2.send_keys("chocolate cand") # ievada ēdina nosaukumu
+button = driver.find_element(By.ID, "btnsearch") # atrod search lauciņu
+button.click()
+
+element = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.CSS_SELECTOR, f'[data-title="Calories"]'))
+)
+kalorijas = element.text
+
+element = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.CSS_SELECTOR, f'[data-title="Fat"]'))
+)
+tauki = element.text
+
+element = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.CSS_SELECTOR, f'[data-title="Carbs*"]'))
+)
+oglhidrati = element.text
+
+element = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.CSS_SELECTOR, f'[data-title="Protein"]'))
+)
+proteini = element.text
+
+
 time.sleep(5)
+print(f"Kalorijas: {kalorijas} Tauki: {tauki} Ogļhidrāti: {oglhidrati} Proteīni: {proteini}")
 
 
 ###  neaiztikt
