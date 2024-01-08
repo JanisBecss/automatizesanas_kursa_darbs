@@ -5,25 +5,23 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-from openpyxl import Workbook, load_workbook 
+
 
 url = "https://www.google.com/search?q=tulkot%C4%81js&sca_esv=594646980&sxsrf=AM9HkKkT8UtYVNOtVlqEq8j6qPwYofAl0Q%3A1703974912971&ei=AJiQZYP4Os-OwPAPqLOUiAY&udm=&ved=0ahUKEwiD-JKbmbiDAxVPBxAIHagZBWEQ4dUDCBE&uact=5&oq=tulkot%C4%81js&gs_lp=Egxnd3Mtd2l6LXNlcnAiCnR1bGtvdMSBanMyChAjGIAEGIoFGCcyChAjGIAEGIoFGCcyBRAAGIAEMgUQABiABDILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMggQABiABBjLATIFEAAYgAQyBRAAGIAEMgUQABiABEiAA1AAWABwAHgBkAEAmAFBoAFBqgEBMbgBA8gBAPgBAeIDBBgAIEGIBgE&sclient=gws-wiz-serp"
-url_2 = "https://www.myfitnesspal.com/nutrition-facts-calories/cereals"
+url_2 = "https://caloriecontrol.org/healthy-weight-tool-kit/food-calorie-calculator/"
 edieni=[]
 svars_g=[]
 
+service = Service()
+option = webdriver.ChromeOptions()
+driver = webdriver.Chrome(service=service, options=option)
 
-# service = Service()
-# option = webdriver.ChromeOptions()
-# driver = webdriver.Chrome(service=service, options=option)
-# driver.get(url_2)
-# time.sleep(5)
-
-# find = driver.find_element(By.XPATH, '//*[@id="notice"]/div[4]/button[1]') # piekrīt noteikumiem
-# time.sleep(1)
-# find.click()
-# time.sleep(5)
-
+driver.get(url_2)
+button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.CLASS_NAME, 'cky-btn-accept')) # akceptē cookies
+)
+button.click() 
+time.sleep(5)
 
 
 ###  neaiztikt
