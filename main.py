@@ -14,7 +14,6 @@ svars_g=[]
 kalorijas = tauki = oglhidrati = proteini = 36
 # kalorijas, tauki, oglhidrati, proteini = search.mekletajs("apple") # g uz 100g produkta 
 
-
 # while True:
 #     ediens_lv = str(input("Ko ēdāt: "))
 #     if ediens_lv.lower() == "x":   
