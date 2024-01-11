@@ -7,7 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import search
 import translate
-
+import pandas as pd
+from datetime import datetime
 
 edieni=[]
 svars_g=[]
@@ -31,8 +32,34 @@ kalorijas = tauki = oglhidrati = proteini = 36
 #     oglhidrati += oglhidrati
 #     proteini += proteini 
 
-print(kalorijas, tauki, oglhidrati, proteini)
 
+# print(kalorijas, tauki, oglhidrati, proteini)
+data = {
+    'Date': [datetime.now().strftime('%Y-%m-%d')],
+    'Kalorijas': [kalorijas],
+    'Tauki': [tauki],
+    'Oglhidrati': [oglhidrati],
+    'Proteini': [proteini]
+}
 
+# DataFrame
+df = pd.DataFrame(data)
+
+# File path
+excel_file_path = 'results.xlsx'
+
+# Check if the file exists
+try:
+    existing_data = pd.read_excel(excel_file_path, engine='openpyxl')
+    # Append new data to existing DataFrame
+    df = pd.concat([existing_data, df], ignore_index=True)
+except FileNotFoundError:
+    # File doesn't exist, create a new DataFrame
+    df = pd.DataFrame(data)
+
+# Save the DataFrame to Excel
+df.to_excel(excel_file_path, index=False, engine='openpyxl')
+
+print(f"Data saved to {excel_file_path}")
 
 
