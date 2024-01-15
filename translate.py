@@ -15,8 +15,10 @@ def tulkosana(ediens): # list kā arguments!
     option = webdriver.ChromeOptions()
     driver = webdriver.Chrome(service=service, options=option)
     driver.get(url)
-    time.sleep(5)
-    find = driver.find_element(By.ID, "L2AGLb") # piekrīt noteikumiem
+    find = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.ID, "L2AGLb")) # atrod search lauciņu
+    )
+
     find.click() 
     find = driver.find_element(By.ID, "tw-sl") # atver izvēles lapu
     find.click()

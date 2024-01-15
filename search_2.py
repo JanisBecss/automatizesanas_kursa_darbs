@@ -22,6 +22,7 @@ def uzturvertiba(tips, food):
     except:
         mekletajs(food[:-1]) if len(food) > 1 else None
 
+
 def mekletajs(food): # string kā arguments
     driver.get(url_2)
     find_2 = WebDriverWait(driver, 10).until(
