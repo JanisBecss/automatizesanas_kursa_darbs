@@ -20,23 +20,21 @@ def uzturvertiba(tips, food):
         )
         return round(float(element.text)*100, 2)
     except:
-        return mekletajs(food[:-1])
+        mekletajs(food[:-1]) if len(food) > 1 else None
 
-
-def mekletajs(food):
+def mekletajs(food): # string kā arguments
     driver.get(url_2)
     find_2 = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.ID, "keywordsearch")) # atrod search lauciņu
     )
     find_2.clear() # notīra lauku
     find_2.send_keys(f"{food}") # ievada ēdina nosaukumu
-    button = driver.find_element(By.ID, "searchbutton") # nospiež search pogu
-    button.click()
+    button = driver.find_element(By.ID, "searchbutton") # atrod search pogu
+    button.click() # nospiež search pogu
     kalorijas = uzturvertiba("Calories", food) # izsauc funkciju kas nolasīs uzturvērtību 100g produkta
     tauki = uzturvertiba("Fat", food)
     oglhidrati = uzturvertiba("Carbs", food)
     proteini = uzturvertiba("Protein", food)
-    return kalorijas, tauki, oglhidrati, proteini
+    kalorijas = uzturvertiba("Calories", food) # izsauc funkciju vēlreiz, lai kalorijas nebūtu None
+    return [kalorijas, tauki, oglhidrati, proteini]
 
-
-print(mekletajs("cucumber2"))

@@ -19,7 +19,7 @@ def uzturvertiba(tips):
     )
     return element.text
 
-def mekletajs(food):
+def mekletajs(food): # string kā arguments
     driver.get(url_2)
     button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CLASS_NAME, 'cky-btn-accept')) # akceptē cookies
