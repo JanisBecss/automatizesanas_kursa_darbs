@@ -4,7 +4,8 @@
 
 Jānis Bečs 231RDB015
 
-Ievads
+## Ievads
+
 Būdams fiziski aktīvs cilvēks, kurš regulāri apmeklē svaru zāli un seko līdzi savam uzturam, es nolēmu sev atvieglot kādu no šiem ikdienas procesiem. Tā arī radās iedeja par pārtikas produktu uzturvērtības skaitītāju.
 
 Projekta uzdevums
