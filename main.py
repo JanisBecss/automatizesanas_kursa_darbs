@@ -32,8 +32,9 @@ def main():
         tauki += uzturvertiba[1] * (svars_g[i] / 100)
         oglhidrati += uzturvertiba[2] * (svars_g[i] / 100)
         proteini += uzturvertiba[3] * (svars_g[i] / 100)
-        excel.write_to_file(kalorijas, tauki, oglhidrati, proteini)
-
+        
+    
+    excel.write_to_file(kalorijas, tauki, oglhidrati, proteini)
     print(f"Kalorijas: {kalorijas}cal Tauki: {tauki}g Ogļhidrāti: {oglhidrati}g Proteīni: {proteini}g")
     print("Dati saglabāti!")
 
