@@ -1,6 +1,6 @@
 # automatizesanas_kursa_darbs\
 
-Pārtikas produktu uzturvērtības skaitītājs
+###Pārtikas produktu uzturvērtības skaitītājs
 Jānis Bečs 231RDB015
 
 Ievads
@@ -9,7 +9,16 @@ Būdams fiziski aktīvs cilvēks, kurš regulāri apmeklē svaru zāli un seko l
 Projekta uzdevums
 Atvieglot ikdienas procecu, kas saistīts ar pārtikas produktu uzturvērtību (kaloriju, proteīna, ogļhidrātu un tauku) skaitīšanu.
 
-Programmas darbība:
+Programmas lietošanas pamācība
+Kad prasīs 'Cik g apēdāt:' jums jāievada TIKAI skaitlis!
+Lūdzu rakstiet vispārīgākus produktu nosaukumus, piem., 'vistas cepetis'->'vista', 'piena spēks'->'proteīna piens' un rakstiet tikai vienu produkta nosaukumu uz katru jautājumu. Pārbaudiet vai produkts ir uzrakstīts pareizi.
+Kad visi produkti sarakstīti, uz jautājumu 'Ko ēdāt:' ievadiet atbildi 'x'. Tas izbeigs jautājumu jautāšanu un sāks uzturvērtību aprēķinus.
+Programma automātiski aprēķinās kopējo kaloriju, tauku, ogļhidrātu, proteīnu daudzumu.
+Kopējo uzturvērtību daudzumu izvadīs uz ekrāna un saglabās Excel failā 'results.xlsx'.
+Jūs varat startēt programmu neierobežotu reižu skaitu, Excel failā atbilstošās vērtības tiks pieskaitītas atbilstošā datuma rindā.
+Vairāku ierakstu gadījumā, programma var apstrādāt datus ilgāku laika posmu.
+
+Programmas darbība
 'main.py'
 Programma darbība sākas palaižot 'main.py'. Tiek importēti faili 'search_2.py', 'translate.py', 'excel.py'. Katrs no šiem failiem satur funkcijas, kas paredzētas nosaukumam atbilstošās darbības izpildei. 'main.py' sākumā tiek definēti saraksti, kur tiks saglabāti ēdienu latviskie nosaukumi un ēdinu svars gramos, kā arī tiek definēti mainīgie uzturvērtību saglabāšanai -> tiek izvadīts īss programmas darbības apraksts. -> while true cikls, kas paredzēts pārtikas produktu latviskiem nosaukumiem un svaram gramos. -> tiek izsaukta importētā funkcijas, kas nodod un atgriež List kā argumentu(tiek atgriezts List ar pārtikas produktu nosaukumiem angļu valodā) -> for cikls, kur katra cikla sākumā tiek izsaukta 'mekletajs' funkcija no importētā faila 'search_2', kas nodod Lista i elementu kā argumentu un atgriež listu ar atbilstošā pārtikas produkta uzturvērtību'(g uz 100g produkta). -> tiek aprēķināts uzturvērtību daudzums ņemot vērā ievadītu ēdiena daudzumu gramos -> katra cikla beigās tiek izsaukta write_to_file funkcija, kas tika importēta no faila 'excel.py', funkcija paredzēta lai katra pārtikas produkta uzturvērtības ierakstu saglabātu/pieskaitītu atbilstošā datuma rindai. Rezultāti tiek saglabāti results.xlsx failā, gadījumā, ja fails nav izveidots, tas tiek izveidots. Ja atbilstošās dienas rinda ir tukša, tā tiek pievienota, gadījumā ja tā jau eksistē, tad uzturvērtības tiek jau pieskaitītas klāt eksistējošajām vērtībām -> Kad viss sekmīgi izpildīts, tiek izvadīts kopējais uzturvielu daudzums un programmas sekmīgas darbības apstiprinošs teksts.
 
@@ -32,4 +41,7 @@ https://caloriecontrol.org/healthy-weight-tool-kit/food-calorie-calculator/
 https://www.livofy.com/fitness-health-calculators/food-calorie-calculator
 https://www.google.com/search?q=tulkot%C4%81js&oq=&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIOCAAQRRgnGDkYgAQYigUyBggBEEUYOzIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDINCAUQABiDARixAxiABDINCAYQABiDARixAxiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDI5MDBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
 
-Ievadīt un apēstā ēdiena daudzumu. Izvadīt ēdiena kaloriju skaitu, proteīna, ogļhidrātu un tauku daudzumu(saglabāt arī EXCEL failā).
+Projektā izmantotās bibliotēkas:
+selenium
+time
+pandas
