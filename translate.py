@@ -16,7 +16,7 @@ def tulkosana(ediens): # list kā arguments!
     driver = webdriver.Chrome(service=service, options=option)
     driver.get(url)
     find = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "L2AGLb")) # atrod search lauciņu
+        EC.element_to_be_clickable((By.ID, "L2AGLb")) # piekrīt noteikumiem
     )
 
     find.click() 
