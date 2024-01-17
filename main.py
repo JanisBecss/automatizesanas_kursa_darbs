@@ -7,6 +7,16 @@ def main():
     svars_g = []
     kalorijas = tauki = oglhidrati = proteini = 0
 
+    print()
+    print("Sveiki! Jums jāievada pārtikas produkta nosaukums, kad prasīs 'Ko ēdāt:'")
+    print("Kad prasīs 'Cik g apēdāt:' jums jāievada TIKAI skaitlis!")
+    print("Lūdzu rakstiet vispārīgākus produktu nosaukumus, piem., 'vistas cepetis'->'vista' , 'piena spēks'->'proteīna piens'")
+    print("Kad visi produkti sarakstīti, uz jautājumu 'Ko ēdāt:' ievadiet atbildi 'x'")
+    print("Programma automātiski aprēķinās kopējo kaloriju, tauku, ogļhidrātu, proteīnu daudzumu")
+    print("Kopējo uzturvērtību daudzumu izvadīs uz ekrāna un saglabās Excel failā")
+    print("Jūs varat startēt programmu neierobežotu reižu skaitu, Excel failā atbilstošās vērtības tiks pieskaitītas atbilstošā datuma rindā.")
+    print("Vairāku ierakstu gadījumā programma var apstrādāt datus ilgāku laika posmu.")
+
     while True:
         ediens_lv = str(input("Ko ēdāt: "))
         if ediens_lv.lower() == "x":
@@ -25,6 +35,7 @@ def main():
         proteini += uzturvertiba[3] * (svars_g[i] / 100)
         excel.write_to_file(kalorijas, tauki, oglhidrati, proteini)
 
+    print(f"Kalorijas: {kalorijas}cal Tauki: {tauki}g Ogļhidrāti: {oglhidrati}g Proteīni: {proteini}g")
     print("Dati saglabāti!")
 
 if __name__ == "__main__":
