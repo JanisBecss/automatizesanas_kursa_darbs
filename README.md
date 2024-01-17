@@ -1,6 +1,7 @@
 # automatizesanas_kursa_darbs\
 
-###Pārtikas produktu uzturvērtības skaitītājs
+### Pārtikas produktu uzturvērtības skaitītājs
+
 Jānis Bečs 231RDB015
 
 Ievads
