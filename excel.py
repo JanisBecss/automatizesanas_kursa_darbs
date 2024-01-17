@@ -21,7 +21,7 @@ def write_to_file(kalorijas, tauki, oglhidrati, proteini):
 
     if 'Datums' not in df_new.columns:
         df_new['Datums'] = df_new.index  
-
+        
     if 'Datums' not in existing_data.columns:
         existing_data['Datums'] = existing_data.index  # Assuming 'Datums' should be the index
 
