@@ -47,14 +47,14 @@ Fails satur funkciju, kas paredzēta pārtikas produkta uzturvērtības pieraks�
 
 ## Projektā izmantotās mājaslapas
 
-#### Projektā tika izmantotas 3 mājaslapasa(pašas programmas izpildei 2):
+#### Projektā tika izmantotas 3 mājaslapasa (programmas izpildei 2):
 
-https://caloriecontrol.org/healthy-weight-tool-kit/food-calorie-calculator/
-https://www.livofy.com/fitness-health-calculators/food-calorie-calculator
-https://www.google.com/search?q=tulkot%C4%81js&oq=&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIOCAAQRRgnGDkYgAQYigUyBggBEEUYOzIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDINCAUQABiDARixAxiABDINCAYQABiDARixAxiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDI5MDBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+- https://caloriecontrol.org/healthy-weight-tool-kit/food-calorie-calculator/
+- https://www.livofy.com/fitness-health-calculators/food-calorie-calculator
+- https://www.google.com/search?q=tulkot%C4%81js&oq=&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIOCAAQRRgnGDkYgAQYigUyBggBEEUYOzIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDINCAUQABiDARixAxiABDINCAYQABiDARixAxiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDI5MDBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
 
 ## Projektā izmantotās bibliotēkas:
 
-selenium
-time
-pandas
+- selenium
+- time
+- pandas
