@@ -9,7 +9,7 @@ def main():
     print()
     print("Sveiki! Jums jāievada pārtikas produkta nosaukums, kad prasīs 'Ko ēdāt:'")
     print("Kad prasīs 'Cik g apēdāt:' jums jāievada TIKAI skaitlis!")
-    print("Lūdzu rakstiet vispārīgākus produktu nosaukumus, piem., 'vistas cepetis'->'vista' , 'piena spēks'->'proteīna piens'")
+    print("Lūdzu rakstiett vispārīgākus produktu nosaukumus, piem., 'vistas cepetis'->'vista' , 'piena spēks'->'proteīna piens'")
     print("Kad visi produkti sarakstīti, uz jautājumu 'Ko ēdāt:' ievadiet atbildi 'x'")
     print("Programma automātiski aprēķinās kopējo kaloriju, tauku, ogļhidrātu, proteīnu daudzumu")
     print("Kopējo uzturvērtību daudzumu izvadīs uz ekrāna un saglabās Excel failā")
