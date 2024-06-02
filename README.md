@@ -1,4 +1,4 @@
-# automatizesanas_kursa_darbs\
+# automatizesanas_kursa_darbs
 
 ## Pārtikas produktu uzturvērtības skaitītājs
 
